@@ -2,11 +2,17 @@
 
 A freelance portfolio and deposit site for **Scott Carpenter** — simple, modern websites for local Michigan small businesses in Webberville, Okemos, Lansing, Fowlerville, and nearby towns.
 
+- **GitHub (public):** [https://github.com/secarpenter26-hub/mid-michigan-websites](https://github.com/secarpenter26-hub/mid-michigan-websites)
+- **Live site:** [https://temporary-prompt-quasar-pvgjdcc.vercel.app](https://temporary-prompt-quasar-pvgjdcc.vercel.app)
+- **Keep that URL:** claim it into your Vercel Hobby account with [this claim link](https://vercel.com/claim-deployment?code=80775ad7-d5ff-42af-920d-ddac06c69a4d) (sign in as Scott). Unclaimed temporary URLs expire about an hour after deploy.
+
 Prospects from a cold email can:
 
 1. See before/after example mockups
 2. Read Starter, Growth, and Care packages
 3. Pay a **$300 deposit** through Stripe Checkout
+
+Without Stripe keys, **Pay deposit** still works. It opens a demo thank-you page and does not charge anyone. Confirmed on the live URL.
 
 ## Run locally
 
@@ -51,26 +57,24 @@ Cancel URL: `{NEXT_PUBLIC_SITE_URL}/cancel`
 
 On Vercel, set `NEXT_PUBLIC_SITE_URL` to your production URL (`https://your-project.vercel.app`). If it is missing, the app falls back to the incoming request origin.
 
-## Push to GitHub
+## GitHub
 
-This repo is meant to be public. Do not commit `.env.local`.
+The public repo is already live:
 
-```bash
-git add .
-git commit -m "Add Mid-Michigan Websites portfolio and Stripe deposits"
-git branch -M main
-git remote add origin https://github.com/YOUR_USER/mid-michigan-websites.git
-git push -u origin main
-```
+[https://github.com/secarpenter26-hub/mid-michigan-websites](https://github.com/secarpenter26-hub/mid-michigan-websites)
 
-If the remote already exists, skip `git remote add` and push to `main`.
+Do not commit `.env.local`.
 
 ## Deploy on Vercel Hobby (free)
 
-1. Sign in at [vercel.com](https://vercel.com) with GitHub.
-2. **Add New… → Project** and import this repository.
+A Vercel Hobby project named `mid-michigan-websites` already exists on Scott’s account. Preview URLs may ask for a Vercel login until **Deployment Protection** is turned off (Project → Settings → Deployment Protection).
+
+To get a lasting public URL that updates on every git push:
+
+1. Sign in at [vercel.com](https://vercel.com) with GitHub (`secarpenter26-hub`).
+2. Use the [claim link](https://vercel.com/claim-deployment?code=80775ad7-d5ff-42af-920d-ddac06c69a4d), **or** **Add New… → Project** and import `secarpenter26-hub/mid-michigan-websites`.
 3. Framework preset: **Next.js**. Leave the build command as `next build`.
-4. Add environment variables (same names as `.env.example`):
+4. Add environment variables only when you are ready for real Stripe Checkout (demo mode works with none of these):
 
    | Name | Example |
    | --- | --- |
